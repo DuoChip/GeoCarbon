@@ -1,0 +1,83 @@
+/* Hiệu ứng menu */
+.hover-effect {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.hover-effect::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.hover-effect:hover::after {
+  width: 100%;
+}
+
+/* Hiệu ứng ảnh */
+.forest-image, .gis-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.forest-image .img-overlay, .gis-image .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 135, 84, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.forest-image:hover .img-overlay, .gis-image:hover .img-overlay {
+  opacity: 1;
+}
+
+.forest-image:hover img, .gis-image:hover img {
+  transform: scale(1.03);
+  transition: transform 0.5s ease;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
