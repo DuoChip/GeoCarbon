@@ -67,9 +67,35 @@
 }
 
 /* Hero Section */
-.hero {
+/* .hero {
   padding: 100px 0;
+} */
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
+.position-relative {
+  position: relative;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+/* Responsive: trên mobile, điều chỉnh background-position nếu cần */
+@media (max-width: 768px) {
+  .hero {
+    background-position: 75% center; /* Di chuyển ảnh sang phải một chút để tập trung vào phần quan trọng */
+  }
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
