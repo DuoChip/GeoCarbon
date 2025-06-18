@@ -5,220 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên hệ - GeoCarbon</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #198754;
-            --secondary-color: #146c43;
-            --light-green: #d1e7dd;
-            --dark-color: #343a40;
-            --light-gray: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            background-color: #f8fff8;
-        }
-
-        .contact-header {
-            background: linear-gradient(rgba(25, 135, 84, 0.85), rgba(20, 108, 67, 0.9)), url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 100px 0;
-            color: white;
-            text-align: center;
-        }
-
-        .contact-card {
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            overflow: hidden;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .contact-info {
-            background-color: var(--light-gray);
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: var(--light-green);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-icon i {
-            color: var(--primary-color);
-            font-size: 24px;
-        }
-
-        .contact-form .form-control {
-            border-radius: 8px;
-            padding: 12px 15px;
-            border: 1px solid #dee2e6;
-            margin-bottom: 20px;
-        }
-
-        .contact-form .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 12px 30px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            height: 400px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .contact-item {
-            display: flex;
-            margin-bottom: 25px;
-            align-items: flex-start;
-        }
-
-        .contact-icon-sm {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--light-green);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .contact-icon-sm i {
-            color: var(--primary-color);
-            font-size: 18px;
-        }
-
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--light-green);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .social-icons a:hover i {
-            color: white;
-        }
-
-        .social-icons a i {
-            color: var(--primary-color);
-            font-size: 18px;
-        }
-
-        .hours-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .hours-list li {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px dashed #e9ecef;
-        }
-
-        .hours-list li:last-child {
-            border-bottom: none;
-        }
-
-        .section-title {
-            position: relative;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .contact-image {
-            border-radius: 12px;
-            overflow: hidden;
-            height: 100%;
-        }
-
-        .contact-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .contact-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 60px 0 30px;
-        }
-
-        @media (max-width: 768px) {
-            git fetch origin.contact-header {
-                padding: 60px 0;
-            }
-
-            .contact-image {
-                height: 300px;
-                margin-bottom: 30px;
-            }
-        }
-    </style>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/main.css">
 </head>
 
 <body>
@@ -229,7 +24,7 @@
     <section class="contact-header">
         <div class="container">
             <h1 class="display-4 fw-bold mb-3">Liên hệ với chúng tôi</h1>
-            <p class="lead mb-4">Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn trong hành trình bảo vệ môi trường</p>
+            <p class="lead mb-4">Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn</p>
             <!-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center">
                     <li class="breadcrumb-item"><a href="#" class="text-white">Trang chủ</a></li>
@@ -244,7 +39,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-6 mx-auto text-center">
-                    <h2 class="section-title">Kết nối với GeoCarbon</h2>
+                    <h1 class="display-4 fw-bold mb-3">GEOCARBON</h1>
                     <p class="text-muted">Hãy liên hệ với chúng tôi qua các phương thức dưới đây hoặc sử dụng form liên
                         hệ để gửi yêu cầu của bạn.</p>
                 </div>
@@ -258,7 +53,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <h4 class="mb-3">Địa chỉ</h4>
-                            <p class="text-muted mb-0">Số 123, Đường Xanh, Quận 1, TP. Hồ Chí Minh</p>
+                            <p class="text-muted mb-0">Trường đại học Bách Khoa - ĐHQG Hồ Chí Minh (cơ sở Dĩ An), Đông Hoà, Dĩ An, Bình Dương</p>
                         </div>
                     </div>
                 </div>
@@ -270,8 +65,8 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <h4 class="mb-3">Điện thoại</h4>
-                            <p class="text-muted mb-1">(028) 1234 5678</p>
-                            <p class="text-muted mb-0">(028) 8765 4321</p>
+                            <p class="text-muted mb-1">(+84) 69595568</p>
+                            <!-- <p class="text-muted mb-0">(028) 8765 4321</p> -->
                         </div>
                     </div>
                 </div>
@@ -283,8 +78,8 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <h4 class="mb-3">Email</h4>
-                            <p class="text-muted mb-1">contact@geocarbon.org</p>
-                            <p class="text-muted mb-0">support@geocarbon.org</p>
+                            <p class="text-muted mb-1">geocarbon.group@gmail.com</p>
+                            <!-- <p class="text-muted mb-0">geocarbon.team@gmail.com</p> -->
                         </div>
                     </div>
                 </div>
@@ -322,9 +117,9 @@
                             <div>
                                 <h5>Giờ làm việc</h5>
                                 <ul class="hours-list">
-                                    <li><span>Thứ Hai - Thứ Sáu:</span> <span>8:00 - 17:00</span></li>
-                                    <li><span>Thứ Bảy:</span> <span>8:00 - 12:00</span></li>
-                                    <li><span>Chủ Nhật:</span> <span>Nghỉ</span></li>
+                                    <li><span>Thứ Hai - Thứ Sáu: </span> <span>8:00 - 17:00</span></li>
+                                    <li><span>Thứ Bảy: </span> <span>8:00 - 12:00</span></li>
+                                    <li><span>Chủ Nhật: </span> <span>Nghỉ</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -376,13 +171,14 @@
                 <div class="col-lg-8 mb-4 mb-lg-0">
                     <div class="map-container">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.127037394752!2d106.71327631474905!3d10.80136586164085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a459cb43ab%3A0x6c3d29d370b52a7e!2sHo%20Chi%20Minh%20City%20University%20of%20Technology!5e0!3m2!1sen!2s!4v1665396901595!5m2!1sen!2s"
-                            allowfullscreen="" loading="lazy"></iframe>
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5060.869588376835!2d106.80281567605547!3d10.880562489274604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d914866b51c9%3A0x913146948e01ee20!2zTmjDoCBINiBUcsaw4budbmcgxJHhuqFpIGjhu41jIELDoWNoIEtob2EgVHBIQ00!5e1!3m2!1svi!2s!4v1750262638419!5m2!1svi!2s" 
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="contact-image h-100">
-                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+                        <img src="images/BK.jpg"
                             alt="Văn phòng GeoCarbon">
                     </div>
                 </div>
@@ -408,13 +204,13 @@
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Làm thế nào để tham gia các dự án môi trường của GeoCarbon?
+                                    Làm thế nào để đăng ký nhận thông báo biến động tín chỉ carbon từ GeoCarbon?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Bạn có thể đăng ký tham gia các dự án của chúng tôi bằng cách điền vào mẫu đăng ký
+                                    Bạn có thể đăng ký nhận thông báo của chúng tôi bằng cách điền vào mẫu đăng ký
                                     tình nguyện viên trên trang web. Sau khi nhận được thông tin, đội ngũ của chúng tôi
                                     sẽ liên hệ lại để hướng dẫn cụ thể.
                                 </div>
@@ -442,15 +238,13 @@
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Làm cách nào để đăng ký nhận bản tin từ GeoCarbon?
+                                    Làm cách nào để mua tín chỉ carbon từ GeoCarbon?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Bạn có thể đăng ký nhận bản tin bằng cách điền email vào mục "Đăng ký nhận bản tin"
-                                    ở cuối trang web. Chúng tôi sẽ gửi cho bạn thông tin cập nhật hàng tháng về các hoạt
-                                    động và dự án của GeoCarbon.
+                                    Hiện tại, tổ chức GeoCarbon không trực tiếp bán tín chỉ carbon mà chỉ có vai trò trung gian trong thông kê lượng tín chỉ carbon tại rừng Cần Giờ. 
                                 </div>
                             </div>
                         </div>
@@ -463,7 +257,7 @@
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    GeoCarbon có tổ chức các buổi hội thảo về môi trường không?
+                                    GeoCarbon có tổ chức các buổi hội thảo về vấn đề tín chỉ carbon không?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
@@ -480,15 +274,13 @@
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Tôi có thể thực tập tại GeoCarbon không?
+                                    GeoCarbon thành lập năm bao nhiêu?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#faqAccordion2">
                                 <div class="accordion-body">
-                                    GeoCarbon luôn chào đón các bạn sinh viên đến thực tập. Vui lòng gửi CV và thư
-                                    nguyện vọng về email: hr@geocarbon.org. Chúng tôi sẽ xem xét và liên hệ lại với bạn
-                                    trong thời gian sớm nhất.
+                                    GeoCarbon được chính thức thành lập vào ngày 08/08/2025.
                                 </div>
                             </div>
                         </div>
@@ -497,15 +289,15 @@
                             <h2 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    GeoCarbon có hoạt động ở các tỉnh thành khác ngoài TP.HCM không?
+                                    GeoCarbon có tiến hành thống kê tín chỉ carbon ở các khu vực khác ngoài rừng Cần Giờ không?
                                 </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                 data-bs-parent="#faqAccordion2">
                                 <div class="accordion-body">
-                                    Hiện tại chúng tôi có văn phòng tại TP.HCM và Hà Nội. Tuy nhiên, các dự án của chúng
-                                    tôi được triển khai trên khắp cả nước. Bạn có thể tham gia các hoạt động tại địa
-                                    phương thông qua mạng lưới tình nguyện viên của GeoCarbon.
+                                    Hiện tại GeoCarbon đang trong quá trình khởi động nên chỉ tiến hành thống kê tín chỉ carbon tại rừng Cần Giờ. 
+                                    Tuy nhiên, chúng tôi đang có kế hoạch mở rộng sang các khu vực khác trong tương lai dưới sự hợp tác các đối tác và cấp phép của chính phủ. 
+                        
                                 </div>
                             </div>
                         </div>
