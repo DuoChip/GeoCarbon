@@ -11,8 +11,36 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     background-color: #f8fff8;
+    padding-top: 80px; 
 }
 
+
+/* ****** HEADER ****** */
+
+.navbar {
+  transition: all 0.3s ease; /* Hiệu ứng chuyển tiếp mượt mà */
+}
+
+.navbar.shrink {
+  padding: 5px 0; /* Giảm padding khi cuộn */
+}
+
+#logo {
+  transition: width 0.3s ease, height 0.3s ease; /* Hiệu ứng chuyển tiếp cho logo */
+}
+
+.navbar.shrink #logo {
+  width: 60px; /* Giảm kích thước logo khi cuộn */
+  height: 60px;
+}
+
+#brand-name {
+  transition: font-size 0.3s ease; /* Hiệu ứng chuyển tiếp cho tên thương hiệu */
+}
+
+.navbar.shrink #brand-name {
+  font-size: 1.2rem; /* Giảm kích thước chữ khi cuộn */
+}
 
 
 
@@ -143,14 +171,6 @@ body {
     font-size: 2.5rem;
   }
 }
-
-
-
-
-
-
-
-
 
 
 
