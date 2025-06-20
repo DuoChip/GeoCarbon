@@ -1,50 +1,363 @@
-<footer class="bg-dark text-white pt-5 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <h4 class="text-success mb-3">GeoCarbon</h4>
-        <p>Nâng cao nhận thức về môi trường và thúc đẩy các giải pháp bền vững cho tương lai xanh của Trái Đất.</p>
-        <div class="social-icons mt-3">
-          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-          <a href="#" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoCarbon Footer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>  
+        .footer {
+            background: linear-gradient(135deg, #0d2b40 0%, #1a3a4f 100%);
+            color: #fff;
+            border-top: 4px solid #28a745;
+        }
+        
+        .footer-heading {
+            position: relative;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .footer-heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #28a745;
+            border-radius: 2px;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: #e9ecef;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            padding: 4px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .footer-links a:hover {
+            color: #28a745;
+            transform: translateX(5px);
+        }
+        
+        .footer-links a::before {
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 6px;
+            color: #28a745;
+            font-size: 14px;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            color: #28a745;
+            margin-right: 12px;
+            margin-top: 5px;
+            min-width: 20px;
+            text-align: center;
+        }
+        
+        .newsletter-form .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            height: 50px;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .newsletter-form .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: none;
+            border-color: #28a745;
+        }
+        
+        .newsletter-form .btn {
+            background: #28a745;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            padding: 0 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .newsletter-form .btn:hover {
+            background: #218838;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: #28a745;
+            transform: translateY(-3px);
+        }
+        
+        .certificate-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .certificate-badge:hover {
+            background: rgba(40, 167, 69, 0.2);
+            transform: translateY(-5px);
+            border-color: #28a745;
+        }
+        
+        .certificate-badge span {
+            color: #28a745;
+            font-weight: 700;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .copyright {
+            background: rgba(0, 0, 0, 0.2);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .logo-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+        }
+        
+        .logo-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .brand-text h2 {
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            background: linear-gradient(to right, #28a745, #1e88e5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .brand-text p {
+            color: #dee2e6;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+        
+        .company-description {
+            color: #ced4da;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+        
+        @media (max-width: 992px) {
+            .footer-section {
+                margin-bottom: 30px;
+            }
+            
+            .footer-heading {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Company Info (40%) -->
+                <div class="col-lg-5 col-md-12 footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-container">
+                            <div class="logo-bg">
+                                <img src="/components/images/logo_green.png" alt="GeoCarbon Logo" width="130" height="130" id="logo">
+                            </div>
+                        </div>
+                        <div class="brand-text">
+                            <h2>GEOCARBON</h2>
+                            <p>VISUALIZE THE FOREST, QUANTIFY THE FUTURE</p>
+                        </div>
+                    </div>
+                    
+                    <p class="company-description">
+                        GeoCarbon cung cấp giải pháp công nghệ tiên tiến trong giám sát rừng, 
+                        quản lý carbon và phát triển bền vững. Chúng tôi cam kết mang đến những 
+                        công cụ hiện đại giúp doanh nghiệp và tổ chức thực hiện trách nhiệm 
+                        môi trường một cách hiệu quả.
+                    </p>
+                    
+                    <h6 class="text-uppercase text-success fw-bold mb-3">Theo dõi chúng tôi</h6>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links (30%) -->
+                <div class="col-lg-3 col-md-6 footer-section">
+                    <h5 class="footer-heading">Liên kết nhanh</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="footer-links">
+                                <a href="/page/home/home.html">Trang chủ</a>
+                                <a href="/page/team/team.html">Về chúng tôi</a>
+                                <a href="/page/introduce/intro_project.html">Dự án</a>
+                                <a href="/page/maps/map.html">Bản đồ</a>
+                                <a href="/page/news/news.html">Tin tức</a>
+                            </div>
+                        </div>
+                        <!-- <div class="col-6">
+                            <div class="footer-links">
+                                <a href="#">Dự án</a>
+                                <a href="#">Tin tức</a>
+                                <a href="#">Blog</a>
+                                <a href="#">Tài liệu</a>
+                                <a href="#">Liên hệ</a>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    <h5 class="footer-heading mt-4">Hỗ trợ</h5>
+                    <div class="footer-links">
+                        <a href="/page/contact/contact.html">Câu hỏi thường gặp</a>
+                        <a href="#">Hướng dẫn sử dụng</a>
+                        <a href="#">Chính sách bảo mật</a>
+                        <a href="#">Điều khoản dịch vụ</a>
+                    </div>
+                </div>
+                
+                <!-- Contact & Certificates (30%) -->
+                <div class="col-lg-4 col-md-6 footer-section">
+                    <h5 class="footer-heading">Liên hệ với chúng tôi</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Trường đại học Bách Khoa - ĐHQG Hồ Chí Minh (cơ sở Dĩ An), Đông
+                                Hoà, Dĩ An, Bình Dương</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>(028) 372 421 85</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>geocarbon.group@gmail.com</span>
+                        </li>
+                        <!-- <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Thứ 2 - Thứ 6: 8:00 - 17:00</span>
+                        </li> -->
+                    </ul>
+                    
+                    <div class="mt-5">
+                        <h5 class="footer-heading">Bản tin</h5>
+                        <p class="text-light mb-3">Đăng ký nhận thông tin mới nhất về môi trường và tín chỉ carbon</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Email của bạn">
+                                <button class="btn btn-success" type="submit">
+                                    <i class="fas fa-paper-plane me-1"></i> Gửi
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="mt-5">
+                        <h5 class="footer-heading">Chứng nhận</h5>
+                        <div class="d-flex flex-wrap">
+                            <div class="certificate-badge">
+                                <span>ISO 14064</span>
+                            </div>
+                            <div class="certificate-badge">
+                                <span>VCS</span>
+                            </div>
+                            <div class="certificate-badge">
+                                <span>GS VER</span>
+                            </div>
+                            <div class="certificate-badge">
+                                <span>FSC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <hr class="bg-secondary mt-4 mb-4">
+            
+            <!-- Copyright -->
+            <div class="copyright text-center py-3 rounded">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0 text-md-start">
+                        &copy; 2025 GeoCarbon. Tất cả quyền được bảo lưu.
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="#" class="text-light me-3 text-decoration-none">Chính sách bảo mật</a>
+                        <a href="#" class="text-light me-3 text-decoration-none">Điều khoản sử dụng</a>
+                        <a href="#" class="text-light text-decoration-none">Sơ đồ trang</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <h5 class="text-success mb-3">Liên hệ</h5>
-        <ul class="list-unstyled">
-          <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Số 123, Đường Xanh, TP. Hồ Chí Minh</li>
-          <li class="mb-2"><i class="fas fa-phone me-2"></i> (028) 1234 5678</li>
-          <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@geocarbon.org</li>
-          <li><i class="fas fa-clock me-2"></i> Thứ 2 - Thứ 6: 8:00 - 17:00</li>
-        </ul>
-      </div>
-      
-      <div class="col-lg-4 mb-4">
-        <h5 class="text-success mb-3">Bản tin</h5>
-        <p>Đăng ký nhận thông tin mới nhất về môi trường</p>
-        <div class="input-group">
-          <input type="email" class="form-control" placeholder="Email của bạn">
-          <button class="btn btn-success" type="button">Đăng ký</button>
-        </div>
-      </div>
-    </div>
-    
-    <hr class="bg-light">
-    
-    <div class="row">
-      <div class="col-md-6 text-center text-md-start">
-        <p class="mb-0">&copy; 2023 GeoCarbon. Tất cả quyền được bảo lưu.</p>
-      </div>
-      <div class="col-md-6 text-center text-md-end">
-        <ul class="list-inline mb-0">
-          <li class="list-inline-item"><a href="#" class="text-white">Chính sách bảo mật</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white">Điều khoản sử dụng</a></li>
-          <li class="list-inline-item"><a href="#" class="text-white">Sơ đồ trang</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
